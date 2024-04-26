@@ -9,6 +9,13 @@ import "./styles.css";
 
 import { useEffect, useState } from "react";
 const { RangePicker } = DatePicker;
+let BASE_URL = "";
+
+if (window.location.hostname === "localhost") {
+  BASE_URL = "http://localhost:8000";
+} else {
+  BASE_URL = "http://api.andherisupersatta.com";
+}
 const Home = () => {
   const [data, setData] = useState([]);
   const [dashboard, setDashboard] = useState([]);
@@ -19,7 +26,7 @@ const Home = () => {
   }, []);
   const fetchData = async (startDate, endDate) => {
     try {
-      let url = "http://localhost:8000/api/v1/bids/bids-chart";
+      let url = `${BASE_URL}/api/v1/bids/bids-chart`;
       if (startDate) {
         url = `${url}?startDate=${startDate}`;
       }
@@ -35,7 +42,7 @@ const Home = () => {
   };
   const fetchDashboardData = async () => {
     try {
-      let url = "http://localhost:8000/api/v1/users/dashboard";
+      let url = `${BASE_URL}/api/v1/users/dashboard`;
 
       const response = await fetch(url);
       const data = await response.json();

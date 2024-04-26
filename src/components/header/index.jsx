@@ -15,7 +15,7 @@ const Navbar = () => {
         </div>
 
         {/* 2nd menu part  */}
-        <div className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}>
+        {/* <div className={showMediaIcons ? "menu-link mobile-menu-link" : "menu-link"}>
           <ul>
             <li>
               <a href="#" to="/">
@@ -28,7 +28,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
 
         {/* 3rd social media links */}
         <div className="social-media">
