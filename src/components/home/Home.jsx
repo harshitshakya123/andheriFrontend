@@ -14,7 +14,7 @@ let BASE_URL = "";
 if (window.location.hostname === "localhost") {
   BASE_URL = "http://localhost:8000";
 } else {
-  BASE_URL = "http://api.andherisupersatta.com";
+  BASE_URL = "https://api.andherisupersatta.com";
 }
 const Home = () => {
   const [data, setData] = useState([]);
@@ -33,7 +33,7 @@ const Home = () => {
       if (endDate) {
         url = `${url}&endDate=${endDate}`;
       }
-      const response = await fetch(url);
+      const response = await fetch(url, {});
       const data = await response.json();
       setData(data.data);
     } catch (error) {
