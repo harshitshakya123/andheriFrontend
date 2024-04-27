@@ -1,13 +1,12 @@
 import { FacebookOutlined, InstagramFilled, FacebookFilled, TwitterSquareFilled } from "@ant-design/icons";
 import "./styles.css";
-import Logo from "../../assets/andheriLogo.jpeg";
 const Footer = () => {
   return (
     <section>
       <footer className="top">
         {/* <FacebookOutlined style={{ fontSize: "44px", cursor: "pointer" }} /> */}
         <div className="links">
-          <div className="links-column">
+          {/* <div className="links-column">
             <h2>Get Started</h2>
             <p>Introduction</p>
             <p>Documentation</p>
@@ -22,7 +21,7 @@ const Footer = () => {
             <p>Accessibility</p>
             <p>Community</p>
             <p>Marketplace</p>
-          </div>
+          </div> */}
           <div className="links-column socials-column">
             <h2>Social Media</h2>
             <p>Follow us on social media to find out the latest updates on our progress.</p>
