@@ -60,7 +60,7 @@ const Home = () => {
       key: "3",
       width: 80,
       // searchable: true,
-      render: (_, { createdAt }) => new Date(createdAt).toLocaleDateString("en-US"),
+      render: (_, { createdAt }) => new Date(createdAt).toLocaleDateString("en-IN"),
     },
     {
       title: "11:00 AM(2x)",
