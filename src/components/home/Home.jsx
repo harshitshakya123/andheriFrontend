@@ -14,7 +14,7 @@ let BASE_URL = "";
 if (window.location.hostname === "localhost") {
   BASE_URL = "http://localhost:8000";
 } else {
-  BASE_URL = "https://api.andherisupersatta.com";
+  BASE_URL = import.meta.env.VITE_BASE_URL;
 }
 const Home = () => {
   const [data, setData] = useState([]);
@@ -199,7 +199,17 @@ const Home = () => {
           }}
           format={"YYYY-MM-DD"}
         />
-        <Table scroll={{ x: 500 }} columns={allBidsColumns} dataSource={data} />
+        <Table
+          pagination={{
+            showSizeChanger: false,
+            onChange: (e) => console.log(e),
+            pageSize: 30,
+            total: data?.length,
+          }}
+          scroll={{ x: 500 }}
+          columns={allBidsColumns}
+          dataSource={data}
+        />
       </div>
     </div>
   );

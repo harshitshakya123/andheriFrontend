@@ -1,4 +1,4 @@
-import { FacebookOutlined, InstagramFilled, FacebookFilled, TwitterSquareFilled } from "@ant-design/icons";
+import { FacebookFilled, InstagramFilled } from "@ant-design/icons";
 import "./styles.css";
 const Footer = () => {
   return (
@@ -6,22 +6,23 @@ const Footer = () => {
       <footer className="top">
         {/* <FacebookOutlined style={{ fontSize: "44px", cursor: "pointer" }} /> */}
         <div className="links">
-          {/* <div className="links-column">
-            <h2>Get Started</h2>
-            <p>Introduction</p>
-            <p>Documentation</p>
-            <p>Usage</p>
-            <p>Globals</p>
-            <p>Elements</p>
+          <div className="">
+            <h2>To deposit funds into your app account.</h2>
+            <h2>{import.meta.env.VITE_PHONE}</h2>
+            <p>
+              <span style={{ color: "#fffffff5" }}>NOTE:</span> Send screenshot of payment to admin for credit request
+              into app.
+            </p>
           </div>
-          <div className="links-column">
+          {/* <div className="links-column">
             <h2>Resources</h2>
             <p>API</p>
             <p>Visibility</p>
             <p>Accessibility</p>
             <p>Community</p>
             <p>Marketplace</p>
-          </div> */}
+          </div>{" "}
+          */}
           <div className="links-column socials-column">
             <h2>Social Media</h2>
             <p>Follow us on social media to find out the latest updates on our progress.</p>
