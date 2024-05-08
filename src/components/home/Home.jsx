@@ -4,7 +4,7 @@ import img4 from "../../assets/img4.jpg";
 import img5 from "../../assets/img5.jpg";
 import img6 from "../../assets/img6.jpg";
 import { Carousel, DatePicker, Table } from "antd";
-import CountUp from "react-countup";
+// import CountUp from "react-countup";
 import "./styles.css";
 
 import { useEffect, useState } from "react";
@@ -18,11 +18,11 @@ if (window.location.hostname === "localhost") {
 }
 const Home = () => {
   const [data, setData] = useState([]);
-  const [dashboard, setDashboard] = useState([]);
+  // const [dashboard, setDashboard] = useState([]);
   const images = [img5, img2, img3, img4, img6];
   useEffect(() => {
     fetchData();
-    fetchDashboardData();
+    // fetchDashboardData();
   }, []);
   const fetchData = async (startDate, endDate) => {
     try {
@@ -40,18 +40,18 @@ const Home = () => {
       console.log(error);
     }
   };
-  const fetchDashboardData = async () => {
-    try {
-      let url = `${BASE_URL}/api/v1/users/dashboard`;
+  // const fetchDashboardData = async () => {
+  //   try {
+  //     let url = `${BASE_URL}/api/v1/users/dashboard`;
 
-      const response = await fetch(url);
-      const data = await response.json();
-      console.log(data.data);
-      setDashboard(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //     const response = await fetch(url);
+  //     const data = await response.json();
+  //     console.log(data.data);
+  //     setDashboard(data.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   const allBidsColumns = [
     {
@@ -160,7 +160,7 @@ const Home = () => {
           </div>
         ))}
       </Carousel>
-      <div style={{ margin: "50px" }}>
+      {/* <div style={{ margin: "50px" }}>
         <div
           style={{
             textAlign: "center",
@@ -181,7 +181,7 @@ const Home = () => {
               )
           )}
         </div>
-      </div>
+      </div> */}
       <div className="chart">
         <div
           style={{
